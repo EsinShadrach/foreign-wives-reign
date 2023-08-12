@@ -1,0 +1,22 @@
+[
+    {
+        "name": "home",
+        "href": "/"
+    },
+    {
+        "name": "airport",
+        "href": "/airport"
+    },
+    {
+        "name": "accommodation",
+        "href": "/accommodation"
+    },
+    {
+        "name": "activities",
+        "href": "/activities"
+    },
+    {
+        "name": "groups and support",
+        "href": "/groups-and-support"
+    }
+]
