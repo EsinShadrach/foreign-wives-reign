@@ -8,6 +8,8 @@ import routes from "@/data/routes.json";
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { toTitleCase } from "@/utils/helpers";
+import RippleButton from "@/utils/RippleButton";
 
 export default function Navbar() {
 	const [opened, setOpened] = useState<boolean>(false);
@@ -27,7 +29,7 @@ export default function Navbar() {
 		hover: "hover:bg-black/10",
 		afterColor: "after:bg-black",
 		linkColor: "text-white",
-		buttonText: "Login",
+		buttonText: "Join Us",
 	});
 	const path = usePathname();
 
@@ -104,7 +106,7 @@ export default function Navbar() {
 													: "hover:text-[#fbbc0f] after:w-0"
 											}`}
 										>
-											{route.name}
+											{toTitleCase(route.name)}
 										</div>
 									)}
 								</NavLink>
@@ -139,11 +141,11 @@ export default function Navbar() {
 				</button>
 				<div className="hidden md:block">
 					<Link href="/auth/login">
-						<div
-							className={`rounded-md py-1.5 px-7 transition-all duration-300 shadow-md active:scale-90 ${navbarScheme.baseColor} ${navbarScheme.textColor} hover:bg-opacity-90`}
+						<RippleButton
+							className={`rounded-full py-1.5 px-7 transition-all duration-300 shadow-md active:scale-90 ${navbarScheme.baseColor} ${navbarScheme.textColor} hover:bg-opacity-90`}
 						>
 							{navbarScheme.buttonText}
-						</div>
+						</RippleButton>
 					</Link>
 				</div>
 			</nav>
@@ -180,7 +182,7 @@ export default function Navbar() {
 														: `${navbarScheme.hover} hover:bg-opacity-20`
 												}`}
 											>
-												{route.name}
+												{toTitleCase(route.name)}
 											</div>
 										</div>
 									)}
@@ -189,11 +191,12 @@ export default function Navbar() {
 						))}
 					</ul>
 					<div className="w-full max-w-md">
-						<Link
-							href="/auth/login"
-							className={`w-full rounded-md shadow-[5px_5px_10px_rgba(0,_0,_0,_0.25)] flex justify-center items-center py-2 active:scale-95 transition-all duration-300 mt-3 ${navbarScheme.baseColor} ${navbarScheme.textColor} hover:bg-opacity-90`}
-						>
-							{navbarScheme.buttonText}
+						<Link href="/auth/login">
+							<RippleButton
+								className={`w-full rounded-md shadow-[5px_5px_10px_rgba(0,_0,_0,_0.25)] flex justify-center items-center py-2 active:scale-95 transition-all duration-300 mt-3 ${navbarScheme.baseColor} ${navbarScheme.textColor} hover:bg-opacity-90`}
+							>
+								{navbarScheme.buttonText}
+							</RippleButton>
 						</Link>
 					</div>
 				</div>
