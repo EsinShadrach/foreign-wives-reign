@@ -1,15 +1,15 @@
 "use client";
+import routes from "@/data/routes.json";
 import ghanaLogo from "@/public/ghana-wives-logo.png";
 import kenyaLogo from "@/public/kenya-logo-hi-def.png";
 import NavLink from "@/utils/NavLink";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import routes from "@/data/routes.json";
 
+import RippleButton from "@/utils/RippleButton";
+import { toTitleCase } from "@/utils/helpers";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { toTitleCase } from "@/utils/helpers";
-import RippleButton from "@/utils/RippleButton";
 
 export default function Navbar() {
 	const [opened, setOpened] = useState<boolean>(false);
@@ -22,6 +22,10 @@ export default function Navbar() {
 		hover: string;
 		linkColor: string;
 		buttonText: string;
+		logoSize: {
+			width: number;
+			height: number;
+		};
 	}>({
 		logo: ghanaLogo, // Default Logo and color scheme so nextJS doesn't break 🙂
 		baseColor: "bg-black",
@@ -30,6 +34,10 @@ export default function Navbar() {
 		afterColor: "after:bg-black",
 		linkColor: "text-white",
 		buttonText: "Join Us",
+		logoSize: {
+			height: 48,
+			width: 48,
+		},
 	});
 	const path = usePathname();
 
@@ -43,6 +51,10 @@ export default function Navbar() {
 				afterColor: "after:bg-white",
 				linkColor: "text-white",
 				buttonText: "Login",
+				logoSize: {
+					height: 72,
+					width: 27,
+				},
 			});
 			return;
 		}
@@ -56,6 +68,10 @@ export default function Navbar() {
 				afterColor: "after:bg-white",
 				linkColor: "text-white",
 				buttonText: "Login",
+				logoSize: {
+					height: 48,
+					width: 128,
+				},
 			});
 		}
 	}, [path]);
@@ -83,10 +99,11 @@ export default function Navbar() {
 					<Image
 						src={navbarScheme.logo as StaticImageData}
 						alt={"I am an apple"}
-						width={50}
-						height={50}
+						width={navbarScheme.logoSize.width}
+						height={navbarScheme.logoSize.height}
 						priority={true}
 						quality={100}
+						className="object-contain"
 					/>
 				</Link>
 				<div className="hidden md:block">
