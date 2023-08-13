@@ -132,7 +132,7 @@ export default function Navbar() {
 					</ul>
 				</div>
 				<button
-					onClick={() => setOpened(!opened)}
+					onClick={() => setOpened((prev) => !prev)}
 					className={`relative flex gap-2 flex-col p-1.5 rounded-md transition-all duration-300 h-8 md:hidden ${
 						opened
 							? `${navbarScheme.baseColor} bg-opacity-20`
