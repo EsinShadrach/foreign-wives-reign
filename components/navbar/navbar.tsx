@@ -98,7 +98,7 @@ export default function Navbar() {
 				<Link href="/" onClick={() => setOpened(false)}>
 					<Image
 						src={navbarScheme.logo as StaticImageData}
-						alt={"I am an apple"}
+						alt={"Foreign Wives Reign Logo"}
 						width={navbarScheme.logoSize.width}
 						height={navbarScheme.logoSize.height}
 						priority={true}
