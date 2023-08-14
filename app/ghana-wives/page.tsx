@@ -9,6 +9,7 @@ export default function Page() {
 				alt="ghana-wives-bg"
 				priority={true}
 				quality={100}
+				placeholder={"blur"}
 			/>
 			<section className="container mx-auto px-2"></section>
 		</main>
