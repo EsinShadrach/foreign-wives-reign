@@ -4,10 +4,10 @@ function KenyaShowcase() {
 	const imageUrl = 'url("/fwr-kenya-showcase.png")';
 	return (
 		<section
-			className="flex items-center justify-center"
+			className="flex items-center justify-center sm:h-[488px] h-[200px]"
 			style={{
 				backgroundImage: imageUrl,
-				height: "488px",
+				// height: "488px",
 				padding: "2rem",
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
@@ -15,7 +15,7 @@ function KenyaShowcase() {
 				marginBottom: "2rem",
 			}}
 		>
-			<h2 className="text-white font-bold text-[4rem]">Karibu Jisikie</h2>
+			<h2 className="text-white font-bold sm:text-[4rem] text-[2rem]">Karibu Jisikie</h2>
 		</section>
 	);
 }
