@@ -13,7 +13,7 @@ import couple from "@/public/images/people-holding-each-other.jpeg";
 import { Carousel } from "../../utils/CardProps";
 import { CardProps } from "../types";
 
-export const cards: CardProps[] = [
+const cards: CardProps[] = [
 	{ image: banjul, location: "Banjul", href: "#", alt: "Banjul" },
 	{ image: kotuBeach, location: "Kotu Beach", href: "#", alt: "Kotu Beach" },
 	{

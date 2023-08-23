@@ -16,7 +16,7 @@ import Image from "next/image";
 import "swiper/css";
 import { CardProps } from "../types";
 
-export const cards: CardProps[] = [
+const cards: CardProps[] = [
 	{ image: accra, location: "Accra", href: "#", alt: "Accra" },
 	{
 		image: elminaCastle,
