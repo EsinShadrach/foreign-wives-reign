@@ -1,0 +1,8 @@
+-   [x] Navbar
+-   [ ] Cameroon Wives
+-   [ ] Canada Wives
+-   [ ] UK Wives
+-   [ ] Kenya Wives
+-   [ ] Ghana Wives
+-   [ ] Gambia Wives
+-   [ ] Responsive Footer
