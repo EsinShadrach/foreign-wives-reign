@@ -1,16 +1,31 @@
 import bgImage from "@/public/ghana-wives-bg.jpeg";
+import accra from "@/public/images/accra.jpeg";
 import airplane from "@/public/images/airplane.jpeg";
 import airport from "@/public/images/airport.jpeg";
 import elephants from "@/public/images/akwaaba.jpeg";
+import couple from "@/public/images/couple.jpeg";
+import elminaCastle from "@/public/images/elmina-castle.jpeg";
 import grass1 from "@/public/images/grass-1.jpeg";
 import grass2 from "@/public/images/grass-2.jpeg";
-import { H2, H3, P } from "@/utils/typography";
+import lakeVolta from "@/public/images/lake-volta.jpeg";
+import womanSmiling from "@/public/images/woman-smiling.jpeg";
+import { Carousel } from "@/utils/CardProps";
+import { LearnMoreButton } from "@/utils/LearnMore";
+import { H2, P } from "@/utils/typography";
 import Image from "next/image";
 import "swiper/css";
-import { LearnMoreButton } from "@/utils/LearnMore";
-import { Carousel } from "./CardProps";
-import couple from "@/public/images/couple.jpeg";
-import womanSmiling from "@/public/images/woman-smiling.jpeg";
+import { CardProps } from "../types";
+
+export const cards: CardProps[] = [
+	{ image: accra, location: "Accra", href: "#", alt: "Accra" },
+	{
+		image: elminaCastle,
+		location: "Elmina Castle",
+		href: "#",
+		alt: "Elmina Castle",
+	},
+	{ image: lakeVolta, location: "Lake Volta", href: "#", alt: "Lake Volta" },
+];
 
 export default function Page() {
 	return (
@@ -93,7 +108,7 @@ export default function Page() {
 				</div>
 			</section>
 			<div className="bg-black md:mt-20 mt-10 text-white">
-				<Carousel />
+				<Carousel carouselItems={cards} />
 				<section className="py-10 container mx-auto p-2">
 					<div className="max-w-xs space-y-4">
 						<H2>Meet friends, join groups and connect</H2>
